@@ -1,0 +1,114 @@
+<html>
+	<head>
+		<meta charset='utf-8'/>
+		<title>Colorbox Examples</title>
+		<style>
+			body{font:12px/1.2 Verdana, sans-serif; padding:0 10px;}
+			h2{font-size:13px; margin:15px 0 0 0;}
+			.lightbox {
+  column-count: 3;
+  column-gap: 5;
+  max-width: 600px;
+  margin: auto;
+  padding:50px;
+  float:right}
+.thumb {
+  background-color: #eee;
+  display: inline-block;
+  margin: 0 0 10 0;
+  width: 100%;
+  padding: 10px;
+}
+		</style>
+		<link rel="stylesheet" href="colorbox.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="jquery.colorbox.js"></script>
+		<script>
+			$(document).ready(function(){
+				//Examples of how to assign the Colorbox event to elements
+				$(".group1").colorbox({rel:'group1'});
+				$(".group2").colorbox({rel:'group2', transition:"fade"});
+				$(".group3").colorbox({rel:'group3', transition:"none", width:"75%", height:"75%"});
+				$(".group4").colorbox({rel:'group4', slideshow:true});
+				$(".ajax").colorbox();
+				$(".youtube").colorbox({iframe:true, innerWidth:640, innerHeight:390});
+				$(".vimeo").colorbox({iframe:true, innerWidth:500, innerHeight:409});
+				$(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
+				$(".inline").colorbox({inline:true, width:"50%"});
+				$(".callbacks").colorbox({
+					onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+					onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+					onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+					onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+					onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
+				});
+
+				$('.non-retina').colorbox({rel:'group5', transition:'none'})
+				$('.retina').colorbox({rel:'group5', transition:'none', retinaImage:true, retinaUrl:true});
+				
+				//Example of preserving a JavaScript event for inline calls.
+				$("#click").click(function(){ 
+					$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+					return false;
+				});
+			});
+		</script>
+	</head>
+
+<body>
+<div style="position:relative; width:900px; margin:auto; contain:content;">
+
+<div style="position:fixed; top:50; left:0; width:200; text-align:left;">
+<ul>
+<li>Illustration</li>
+<li>Posters</li>
+<li>Informative Graphics</li>
+<li>Promotional Materials</li>
+<li>Others</li>
+</ul>
+</div>
+
+<div style="display: block; float:right; width:650;">
+<hr>
+<h1 style="margin-left:10">Illustrations</h1>
+<hr>
+</div>
+
+<div class="lightbox" style="display:block; position: relative; top:0; right:0">
+<ul>
+<li class="thumb"><a class="group1" href="01_01.jpg" title="Onlooker"><img src="01_01.jpg" style="width:100%"></a></li>
+<li class="thumb"><a class="group1" href="01_02.jpg" title="Still Life #1"><img src="01_02.jpg" style="width:100%"></a></li>
+<li class="thumb"><a class="group1" href="01_03.jpg" title="迷子"><img src="01_03.jpg" style="width:100%"></a></li>
+<li class="thumb"><a class="group1" href="01_04.jpg" title="affection"><img src="01_04.jpg" style="width:100%"></a></li>
+<li class="thumb"><a class="group1" href="01_05.jpg" title="glare"><img src="01_05.jpg" style="width:100%"></a></li>
+<li class="thumb"><a class="group1" href="01_06.jpg" title="Still Life #2"><img src="01_06.jpg" style="width:100%"></a></li>
+<li class="thumb"><a class="group1" href="01_07.jpg" title="past #7"><img src="01_07.jpg" style="width:100%"></a></li>
+</div>
+
+<div style="display: block; float:right; width:650;">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1 style="margin-left:10">Poster</h1>
+<hr>
+</div>
+
+<div class="lightbox" style="display:block; position: relative; top:0; right:0">
+<ul>
+<li class="thumb"><a class="group2" href="02_01.jpg" title="Onlooker"><img src="02_01.jpg" style="width:100%"></a></li>
+<li class="thumb"><a class="group2" href="02_02.jpg" title="Still Life #1"><img src="02_02.jpg" style="width:100%"></a></li>
+<li class="thumb"><a class="group2" href="02_03.jpg" title="迷子"><img src="02_03.jpg" style="width:100%"></a></li>
+<li class="thumb"><a class="group2" href="02_04.jpg" title="affection"><img src="02_04.jpg" style="width:100%"></a></li>
+<li class="thumb"><a class="group2" href="02_05.jpg" title="glare"><img src="02_05.jpg" style="width:100%"></a></li>
+<li class="thumb"><a class="group2" href="02_06.jpg" title="Still Life #2"><img src="02_06.jpg" style="width:100%"></a></li>
+<li class="thumb"><a class="group2" href="02_07.jpg" title="past #7"><img src="02_07.jpg" style="width:100%"></a></li>
+</div>
+
+</div>
+</center>
+</body>
+</html>
