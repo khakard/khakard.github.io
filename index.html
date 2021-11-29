@@ -8,14 +8,21 @@
 			.lightbox {
   column-count: 3;
   column-gap: 5;
-  max-width: 600px;
+  max-width: 650px;
   margin: auto;
-  padding:50px;
+  padding:20px;
+  float:right}
+  			.lightbox2 {
+  column-count: 2;
+  column-gap: 5;
+  max-width: 650px;
+  margin: auto;
+  padding:20px;
   float:right}
 .thumb {
   background-color: #eee;
   display: inline-block;
-  margin: 0 0 10 0;
+  margin: 10 0 0 0;
   width: 100%;
   padding: 10px;
 }
@@ -26,10 +33,10 @@
 		<script>
 			$(document).ready(function(){
 				//Examples of how to assign the Colorbox event to elements
-				$(".group1").colorbox({rel:'group1'});
+				$(".group1").colorbox({rel:'group1', transition:"fade"});
 				$(".group2").colorbox({rel:'group2', transition:"fade"});
-				$(".group3").colorbox({rel:'group3', transition:"none", width:"75%", height:"75%"});
-				$(".group4").colorbox({rel:'group4', slideshow:true});
+				$(".group3").colorbox({rel:'group3', transition:"fade"});
+				$(".group4").colorbox({rel:'group4', transition:"fade"});
 				$(".ajax").colorbox();
 				$(".youtube").colorbox({iframe:true, innerWidth:640, innerHeight:390});
 				$(".vimeo").colorbox({iframe:true, innerWidth:500, innerHeight:409});
@@ -56,19 +63,19 @@
 	</head>
 
 <body>
-<div style="position:relative; width:900px; margin:auto; contain:content;">
+<div style="width:900px; margin:auto;">
 
-<div style="position:fixed; top:50; left:0; width:200; text-align:left;">
+<div style="width:200;  margin:auto; position: fixed; top:50px; text-align:left;">
+<h1>Khaki Chiu</h1>
 <ul>
-<li>Illustration</li>
-<li>Posters</li>
-<li>Informative Graphics</li>
-<li>Promotional Materials</li>
-<li>Others</li>
+<li><a href="#a">Illustration</a></li>
+<li><a href="#b">Promotional Materials</a></li>
+<li><a href="#c">Informative Graphics</a></li>
+<li><a href="#d">Others</a></li>
 </ul>
 </div>
 
-<div style="display: block; float:right; width:650;">
+<div  id="a" style="display: block; float:right; width:650;">
 <hr>
 <h1 style="margin-left:10">Illustrations</h1>
 <hr>
@@ -85,7 +92,7 @@
 <li class="thumb"><a class="group1" href="01_07.jpg" title="past #7"><img src="01_07.jpg" style="width:100%"></a></li>
 </div>
 
-<div style="display: block; float:right; width:650;">
+<div id="b" style="display: block; float:right; width:650;">
 <br>
 <br>
 <br>
@@ -97,16 +104,60 @@
 <hr>
 </div>
 
-<div class="lightbox" style="display:block; position: relative; top:0; right:0">
+<div class="lightbox" style="display:block; top:0; right:0">
 <ul>
-<li class="thumb"><a class="group2" href="02_01.jpg" title="Onlooker"><img src="02_01.jpg" style="width:100%"></a></li>
-<li class="thumb"><a class="group2" href="02_02.jpg" title="Still Life #1"><img src="02_02.jpg" style="width:100%"></a></li>
-<li class="thumb"><a class="group2" href="02_03.jpg" title="迷子"><img src="02_03.jpg" style="width:100%"></a></li>
-<li class="thumb"><a class="group2" href="02_04.jpg" title="affection"><img src="02_04.jpg" style="width:100%"></a></li>
-<li class="thumb"><a class="group2" href="02_05.jpg" title="glare"><img src="02_05.jpg" style="width:100%"></a></li>
-<li class="thumb"><a class="group2" href="02_06.jpg" title="Still Life #2"><img src="02_06.jpg" style="width:100%"></a></li>
-<li class="thumb"><a class="group2" href="02_07.jpg" title="past #7"><img src="02_07.jpg" style="width:100%"></a></li>
+<li class="thumb"><a class="group2" href="02_01.jpg" title=""><img src="02_01.jpg" style="width:100%"></a></li>
+<li class="thumb"><a class="group2" href="02_02.jpg" title=""><img src="02_02.jpg" style="width:100%"></a></li>
+<li class="thumb"><a class="group2" href="02_03.jpg" title=""><img src="02_03.jpg" style="width:100%"></a></li>
+<li class="thumb"><a class="group2" href="02_04.jpg" title=""><img src="02_04.jpg" style="width:100%"></a></li>
+<li class="thumb"><a class="group2" href="02_05.jpg" title=""><img src="02_05.jpg" style="width:100%"></a></li>
+<li class="thumb"><a class="group2" href="02_06.jpg" title=""><img src="02_06.jpg" style="width:100%"></a></li>
+<li class="thumb"><a class="group2" href="02_07.jpg" title=""><img src="02_07.jpg" style="width:100%"></a></li>
+<li class="thumb"><a class="group2" href="02_08.jpg" title=""><img src="02_08.jpg" style="width:100%"></a></li>
+<li class="thumb"><a class="group2" href="02_09.jpg" title=""><img src="02_09.jpg" style="width:100%"></a></li>
 </div>
+
+
+<div  id="c" style="display: block; float:right; width:650;">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1 style="margin-left:10">Informative Graphics</h1>
+<hr>
+</div>
+
+<div class="lightbox2" style="display:block; top:0; right:0">
+<ul>
+<li class="thumb"><a class="group3" href="03_01.jpg" title=""><img src="03_01.jpg" style="width:100%"></a></li>
+<li class="thumb"><a class="group3" href="03_02.jpg" title=""><img src="03_02.jpg" style="width:100%"></a></li>
+<li class="thumb"><a class="group3" href="03_03.jpg" title=""><img src="03_03.jpg" style="width:100%"></a></li>
+<li class="thumb"><a class="group3" href="03_04.jpg" title=""><img src="03_04.jpg" style="width:100%"></a></li>
+</div>
+
+<div id="d" style="display: block; float:right; width:650;">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1 style="margin-left:10">Others</h1>
+<hr>
+</div>
+
+<div class="lightbox2" style="display:block; top:0; right:0">
+<ul>
+<li class="thumb"><a class="group4" href="04_01.jpg" title="Shelf refurbish concept"><img src="04_01.jpg" style="width:100%"></a></li>
+<li class="thumb"><a class="group4" href="04_02.jpg" title="Concept art for short film [Conspiracy]"><img src="04_02.jpg" style="width:100%"></a></li>
+<li class="thumb"><a class="group4" href="04_03.jpg" title="Concept art for short film [Conspiracy]"><img src="04_03.jpg" style="width:100%"></a></li>
+<li class="thumb"><a class="group4" href="04_04.jpg" title="Web layout design"><img src="04_04.jpg" style="width:100%"></a></li>
+</div>
+
 
 </div>
 </center>
